@@ -9,7 +9,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''chown -R 110:115 "/.npm"
+        sh '''mkdir /.npm
+chown -R 110:115 "/.npm"
 npm install'''
       }
     }
